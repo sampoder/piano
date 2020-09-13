@@ -12,7 +12,7 @@ document.onkeydown = function(e){
   if(key===74){playNote('A', e.shiftKey)}
   if(key===75){playNote('B', e.shiftKey)}
   if(key===37){if(section>1){section-=1; document.getElementById('sectionNo').innerText = section}else{alert("The lowest keyboard section is 1.")}}
-  if(key===39){if(section<8){section+=1}else{alert("The highest keyboard section is 8.")}}
+  if(key===39){if(section<8){section+=1; document.getElementById('sectionNo').innerText = section}else{alert("The highest keyboard section is 8.")}}
 }
 function playNote(note, shift) {
   console.log(`${note}${(shift) ? '#' : ''}${section}`)
